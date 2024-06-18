@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position2</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        body {
+            height: 5000px;
+        }
+
+        header {
+            height: 80px;            
+            background-color: beige;
+            padding: 0 32px;
+
+            width: 100%;
+
+            position: fixed;
+            /* 스크롤 적용시 상단 고정을 위해 fixed를 주면 width값이 무시되므로,
+               수동으로 width 값을 넣어주어야 한다 */
+
+            top: 0;
+            /* fixed는 브라우저를 기준으로 정렬된다.
+               그래서 top:0을 줌으로써 상단에 붙어서 따라다닌다. */
+
+            /* fixed를 주면 icon이 오른쪽으로 붙어버리므로
+               box-sizing을 넣어주어야 한다. */
+            box-sizing: border-box;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav {
+            background-color: cadetblue;
+            height: 16px;
+            width: 800px;
+
+        }
+
+        .icons {
+            background-color: cornflowerblue;
+            height: 48px;
+            width: 200px;
+        }
+
+        .container {
+            height: 500px;
+            /* 헤어 여백을 만들어주는 공식, margin-top은 구조가 불가능하므로  */
+            padding-top : 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>logo</h1>
+            <nav>
+
+            </nav>
+            <div class="icons">
+
+            </div>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            left: 40px;
+            /* left로부터 40px이 떨어진다는 뜻 */
+        }
+
+        .static-box {
+        /* position의 기본값 : static */
+            position: static;
+        /* 정적, 고정 이란 뜻을 가지고 있으며, 
+            static 상태로는 이후에 나올 각종 position 속성들과 
+            전혀 상호작용 하지 못한다.
+         */
+        }
+
+        .rel-box {
+            /* position과 관련있게 만들어주는 속성 */
+            position: relative;
+            /* 이 속성은 기존의 흐름을 따라 가지만 position의 영향을 받는다 */
+            top: 50px;
+            
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 40px;
+        }
+
+        .mini-box {
+            width: 50px;
+            height: 50px;
+         }
+    </style>
+</head>
+<body>
+
+    <div class="box static-box">static</div>
+
+     <!-- 흐름에는 순응하지만 position에는 영향을 받는 박스 -->
+    <div class="box rel-box">relative</div>
+
+    <div class="box static-box">static</div>
+
+    <!-- 흐름에서 벗어나 position 속성을 가진 조상에 정렬되는 박스 -->
+    <!-- 가장 먼저 만나는 position 조상이 body이므로 body를 기준으로 정렬됨 -->
+    <div class="box absolute-box">absolute</div>
+
+    <div class="box static-box">static</div>
+
+    <!-- 흐름에 순응하는 rel-box 안에 absolute박스를 넣은 형태. -->
+    <!-- rel-box를 기준으로 정렬되는것을 알 수 있다. -->    
+    <div class="box rel-box">relative
+        <div class="box mini-box absolute-box">abs</div>
+    </div>
+
+    <!-- position이 아닌 static-box 안에 absolute박스를 넣은 형태 -->
+    <!-- static은 무시되므로 역시 body를 기준으로 정렬되는것을 확인 할 수 있다. -->    
+    <div class="box static-box">static
+        <div class="box mini-box absolute-box">abs</div>
+    </div>
+</body>
+</html>
