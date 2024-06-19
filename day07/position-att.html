@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 속성정리</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid #222;
+        }
+
+        .box {
+            width: 40px;
+            height: 40px;
+            background-color: grey;
+            
+            position: absolute;
+            /* left: 100%;
+            margin-left: 16px; */
+
+            left: calc(100% + 16px);
+            /* 서로 다른 단위의 값을 계산할 수 있게 해주는 함수 */
+        }
+
+        .for-center {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="for-center"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

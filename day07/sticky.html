@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .margin-section {
+            height: 1000px;
+        }
+
+        .area {
+            display: flex;
+            gap: 16px;
+        }
+
+        .text-box {
+            margin-bottom: 500px;
+        }
+
+        .text-box>h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .sticky-img {
+            position: sticky;
+            height: 100vh;
+            top: 0;
+            object-fit: cover;
+            /* 잘려도 되는 이미지의 경우 'object-fit:cover'
+               잘려도 되니 오브젝트를 꽉 차게 키워서 커버를 입히라는 명령 */
+
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .area>figure {
+            width: 50%;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="margin-section"></section>
+    <div class="area">
+        <figure>
+            <img class="sticky-img" src="../img/summer-img.jpg" alt="가고싶다">
+        </figure>
+        <div class="text-container">
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+            <div class="text-box">
+                <h2>TEXT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis suscipit aspernatur cum et illo ea qui sit mollitia omnis libero necessitatibus modi voluptatibus odit dolor hic eligendi laborum quae!</p>
+            </div>    
+        </div>
+    </div>
+    <section class="margin-section"></section>
+</body>
+</html>
