@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #222;
+            background-color: pink;
+
+            font-size: 24px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            opacity: 0.8;
+
+        }
+
+        .origin {
+            background-color: #22222280;
+        }
+
+
+        /* ★★ translate는 position 속성과 어떻게 다른가? ★★ */
+        /* 1. 중점
+              - position의 left 100%과 같은 값은 정렬될 개체에 지정하지만,
+                중점은 컨테이너다.
+                부모컨테이너의 오른쪽 끝을 기준으로 바깥쪽에 정렬된다.
+
+              - transform 속성은 자신이 중심으로,
+                transformX(100%)는 자신의 X 크기만큼 오른쪽으로 이동한다.
+         */
+
+        .trans {
+            /* translate : 이동시키는 속성 */
+            /* trnaslateX / translateY / translateZ / translate3D */
+            /* transform: translate(100%, 100%); */
+
+
+            /* scale : 크기를 변화시키는 속성 */
+            /* scale(비율) - 1:1 비율로 변형 / px같은 고정값은 적용불가, 숫자만 적용시 배수적용 또는 % 적용 */
+            /* scale(X비율,Y비율) : 자율변형 / scaleX / scaleY / scaleZ / scale3D */
+            transform: scale(2);
+
+            /* wh_vs_scale.html을 참고해 width, height를 직접 바꾸는것과 
+               scale을 이용해 크기를 바꾸는 것의 차이를 완벽히 구분 해 보자 */
+
+            /* transform: rotate(45deg); */
+            /* 회전 각도값 단위 : deg */
+
+            /* skew : 기울임 속성 */
+            /* transform: skew(30deg); */
+
+            /* transform이 어디를 기준으로 작동될지 잡아주는 기준점 값 : 기본값은 center,center */
+            /* 기준점은 컨텐츠의 바깥쪽에도 지정해줄 수 있다. */
+            transform-origin: 100% center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box origin">
+        원래 위치
+    </div>
+    <div class="box trans">
+        BOX
+    </div>
+</body>
+</html>
