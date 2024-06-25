@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로메뉴</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav {
+            width: 200px;
+            /* overflow: hidden;
+            position: relative; */
+        }
+
+        .nav li {
+            font-size: 14px;
+            background-color: #222;
+            text-align: center;
+            font-weight: bold;
+            font-family: tahoma;
+            border-bottom: 1px solid #808080;
+            line-height: 40px;
+            box-sizing: border-box;
+            color: white;
+            cursor: pointer;
+        }
+
+        .submenu {
+            height: 0;
+            overflow: hidden;
+            transition-duration: 0.5s;
+
+        }
+
+        .submenu li {
+            font-size: 12px;
+            background-color: #999;
+            /* line-height: 40px; */
+            /* nav li에 이미 들어가있으므로 중복속성 */
+            border-bottom: 1px solid #777;
+            /* box-sizing: border-box; */
+            /* nav li에 들어가 있는 중복속성 */
+        }
+
+        .submenu li a {
+            color: black;
+        }
+
+        
+        .nav li:hover {
+            color: red;
+        }
+
+        .nav li:hover .submenu {
+            height: 160px;
+
+        }
+
+        .submenu li:hover {
+            background-color: burlywood;
+            color: yellow;
+            /* a에 이미 컬러를 블랙으로 주었으므로, 내가 먼저라 속성적용이 되지 않음 
+               submenu li a의 컬러를 지워주더라도, a태그 자체가 가지고 있는 컬러가 있으므로
+               (링크컬러 blue) yellow는 역시나 적용되지 않는다. 
+            */
+        }
+
+        .submenu li:hover > a {
+            color: yellow;
+            /* 서브메뉴 폰트에 컬러를 주려면 a태그를 따로 넣어주어야 적용이 된다. */
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>MENU-1
+            <ul class="submenu">
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu1-2</a></li>
+                <li><a href="#">menu1-3</a></li>
+                <li><a href="#">menu1-4</a><li>
+            </ul>
+        </li>
+        <li>MENU-2
+            <ul class="submenu">
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-2</a></li>
+                <li><a href="#">menu2-3</a></li>
+                <li><a href="#">menu2-4</a></li>
+            </ul>
+        </li>
+        <li>MENU-3
+            <ul class="submenu">
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-2</a></li>
+                <li><a href="#">menu3-3</a></li>
+                <li><a href="#">menu3-4</a></li>
+            </ul>
+        </li>
+        <li>MENU-4
+            <ul class="submenu">
+                <li><a href="#">menu4-1</a></li>
+                <li><a href="#">menu4-2</a></li>
+                <li><a href="#">menu4-3</a></li>
+                <li><a href="#">menu4-4</a></li>
+            </ul>
+        </li>
+        <li>MENU-5
+            <ul class="submenu">
+                <li><a href="#">menu5-1</a></li>
+                <li><a href="#">menu5-2</a></li>
+                <li><a href="#">menu5-3</a></li>
+                <li><a href="#">menu5-4</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

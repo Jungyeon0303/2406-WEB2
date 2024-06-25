@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(169, 202, 131);
+
+            transition: 0.5s;
+            
+            /* 트랜지션을 어느 속성에 적용할 것인지 직접 설정 (기본값 all) */
+            transition-property: width, height;
+            /* property 속성을 먼저 사용 해 줌으로써 하단의 transition 속성들이 각자 영향을 받는다. */
+            
+            /* 트랜지션 지속시간 */
+            transition-duration: 0.5s, 0.5s ;
+
+            /* 트랜지션을 재생할 가속도 함수 (기본값은 ease) */
+            transition-timing-function: ease-out,ease;
+
+            /* 트랜지션 재생까지 지연시킬 시간 */
+            transition-delay: 0s,0.5s ;
+        }
+
+        .box:hover {
+            /* 모바일이 생기면서부터 hover 기능은 사용하지 않는다. */
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
