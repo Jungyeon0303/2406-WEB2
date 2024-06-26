@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pack {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .m {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: #c40000;
+        }
+
+        .top-m {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform-origin: bottom;
+
+            animation: up infinite alternate linear 0.3s;
+        }
+
+        .bottom-m {
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            transform-origin: top;
+
+            animation: down infinite alternate linear 0.3s;
+        }
+
+        @keyframes up {
+            from {
+                transform: rotate(0deg);
+                background-color: red;
+            }
+            to {
+                transform: rotate(50deg);
+                background-color: yellow;
+            }
+        }
+
+        @keyframes down {
+            from {
+                transform: rotate(0deg);
+                background-color: red;
+            }   
+            to {
+                transform: rotate(-30deg);
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pack">
+        <span class="m top-m"></span>
+        <span class="m bottom-m"></span>
+    </div>
+</body>
+</html>

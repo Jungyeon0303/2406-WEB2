@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .target {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #AAA;
+
+            font-weight: bold;
+            font-size: 32px;
+            color: #444;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            animation-name: 이름;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            /* animation-delay: 3s; */
+
+            /* 애니메이션 시작, 끝을 어떻게 처리할 것인가 */
+            /* animation-fill-mode: both; */
+
+            /* 애니메이션 실행 횟수 */
+            animation-iteration-count: 3;
+            
+            /* 애니메이션의 방향을 설정하는 속성 */
+            /* 정방향, 역방향, 왕복, 왕복역방향 등 설정가능 */
+            /* 왕복(alternate)시 interation-count는 2보다 커야함 */
+            animation-direction: alternate;
+
+
+        }
+
+        .target:hover {
+            /* 애니메이션 재생상태 (재생되거나 중지되거나) */
+            /* 중지시킬 시 중지시켜주는 액션값을 줘야함 */
+            animation-play-state: paused;
+
+        }
+
+        @keyframes 이름 {
+
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="target">
+        TARGET
+    </div>
+</body>
+</html>
