@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제4</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: #222;
+            display: flex;
+        }
+
+        .mouse {
+            width: 20px;
+            height: 35px;
+            border: 2px solid white;
+            border-radius: 30px 30px;
+
+            position: relative;
+
+            top: 70%;
+            left: 50%;
+            transform: translate(-70%,-50%);
+        }
+
+        .mouse > .mouse-roll {
+            width: 7px;
+            height: 7px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            animation: mouse-roll 0.8s infinite alternate-reverse;
+            
+        }
+
+        @keyframes mouse-roll {
+            from {
+                top: 50%;
+            }
+            to {
+                top: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mouse">
+            <div class="mouse-roll"></div>
+        </div>
+    </div>
+</body>
