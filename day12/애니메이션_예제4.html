@@ -22,13 +22,13 @@
 
             top: 70%;
             left: 50%;
-            transform: translate(-70%,-50%);
+            transform: translate(-50%,-50%);
 
-            animation: mouse 2s;
+            animation: mouse 2s infinite;
         
         }
 
-        .mouse > .mouse-roll {
+        .mouse-roll {
             width: 7px;
             height: 7px;
             background-color: white;
@@ -39,28 +39,35 @@
             left: 50%;
             transform: translate(-50%,-50%);
 
-            animation: mouse-roll 2s;
+            animation: mouse-roll 2s infinite;
                        
         }
 
         @keyframes mouse {
-            from {
+            0% {
                 top: 70%;
                 opacity: 1;
             }
-            to {
+
+            66% {
                 top: 80%;
+                opacity: 1;
+            
+            }
+            100% {
                 opacity: 0;
             }
             
         }
 
         @keyframes mouse-roll {
-            from {
-                top: 30%;
-            }
-            to {
+            66% {
                 top: 70%;
+                opacity: 1;
+            }
+            100% {
+                top: 70%;
+                opacity: 0;
             }
         }
     </style>
