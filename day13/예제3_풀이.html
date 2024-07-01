@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제3 풀이</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #222;
+            margin: 20px;
+            position: relative;
+        }
+
+        .animation-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .h-letter {
+            width: 150px;
+            height: 250px;
+            background-color: white;
+        }
+
+        .stroke {
+            background-color: red;
+        }
+
+        .width1 {
+            width: 50px;
+        }
+
+        .height1 {
+            height: 50px;
+        }
+
+        .height5 {
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animation-container h-letter">
+            <div class="stroke width1 height5"></div>
+            <div class="stroke width1 height1"></div>
+            <div class="stroke width1 height5"></div>
+        </div>
+    </div>
+</body>
+</html>
