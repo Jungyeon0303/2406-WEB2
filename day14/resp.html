@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹</title>
+    <style>
+        /* 반응형 제작시에는 PC퍼스트 or 모바일퍼스트 선택해야 한다. */
+        .반응형박스 {
+            width: 100%;
+            height: 50vh;
+            background-color: cadetblue;
+        }
+        
+        /* @media screen and (max-width:800px) and (min-width:750px) {
+            .반응형박스 {
+                background-color: red;
+            }            
+        } */
+        
+        /* 1366~ PC / 768~1365 tablet / ~767 mobile : 분기점 사이즈 가이드 예시 */
+
+        /* PC퍼스트 */
+        /* @media screen and (max-width:1365px) {
+            태블릿          
+        }
+
+        @media screen and (max-width:767px) {
+            모바일         
+        } */
+
+
+        /* 모바일퍼스트 */
+        /* @media screen and (min-width:768px) {
+            태블릿
+        }
+
+        @media screen and (min-width:1366px) {
+            PC
+        } */
+        
+    </style>
+</head>
+<body>
+    <div class="반응형박스"></div>
+</body>
+</html>
