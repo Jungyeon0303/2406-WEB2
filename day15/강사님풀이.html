@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .logo-spr {
+            display: block;
+            background: url('imgs/spr_intro.png') no-repeat 0 -98px;
+            width: 78px;
+            height: 29px;
+        }
+
+        .hide-text {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(0 0 99.9% 99.9%);
+            overflow: hidden;
+            height: 1px;
+            width: 1px;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo-spr">
+                <span class="hide-text">
+                    BAND
+                </span>
+            </a>
+            <div class="header-buttons">
+             
+
+                <select id="">
+                    <option>한국어</option>
+                    <option>English</option>
+                </select>
+     
+                <a href="#">회원가입</a>
+                <a href="#" class="band-button">로그인</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div class="section-container">
+            <figure>
+                <img src="" alt="">
+            </figure>
+            <div class="intro-contents">
+                <h1></h1>
+                <p></p>
+                <a href="#" class="band-button"></a>
+                <a href="#"></a>
+                <p> <a href="#" class="more-link"></a></p>
+                <p> <a href="#" class="more-link"></a></p>
+                <p> <a href="#" class="more-link"></a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="meeting">
+        <div class="meeting-texts">
+            <h2></h2>
+            <p></p>
+        </div>
+    </section>
+
+    <style>
+        body > section {
+            padding: 0 32px;
+        }
+
+        .section-container {
+            width: 1000px;
+            margin: 0 auto;
+
+
+            /* border: 1px solid #222; */
+        }
+
+        #meeting-explane {
+            background-color: rgb(244, 244, 244);
+            padding: 80px 32px;
+          
+        }
+
+        #meeting-explane > .section-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .explane-content > figure {
+            margin-bottom: 20px;
+        }
+
+        .explane-content > figure >img {
+            border-radius: 8px;
+        }
+
+        .explane-content > h3{
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .explane-content > p {
+            font-size: 15px;
+            color: #555;
+            line-height: 150%;
+        }
+    </style>
+
+    <section id="meeting-explane">
+        <div class="section-container">
+            <div class="explane-content">
+                <figure>
+                    <img src="imgs/img_seo01.jpg" alt="">
+                </figure>
+                <h3>어떤 모임이라도!
+                </h3>
+                <p>친구, 가족, 동료 등 함께 하고 싶은 사람과
+                    우리만의 공간을 만들어보세요.</p>
+            </div>
+            <div class="explane-content">
+                <figure>
+                    <img src="imgs/img_seo02.jpg" alt="">
+                </figure>
+                <h3>모임에 딱 맞는 기능들</h3>
+                <p>투표로 의견을 모으고, 함께 일정을 공유하며
+                    게시판과 앨범에는 추억을 쌓아보세요.</p>
+            </div>
+            <div class="explane-content">
+                <figure>
+                    <img src="imgs/img_seo03.jpg" alt="">
+                </figure>
+                <h3>내가 원하는 모임 찾기</h3>
+                <p>취미, 스포츠, 또래 모임 등
+                    나와 같은 관심사 밴드를 찾을 수 있어요.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommand">
+        <div class="section-container">
+            <div class="section-header">
+                <h2></h2>
+                <a href="#"></a>
+            </div>
+            <ul class="band-recommand-list">
+                <li class="band-recommand">
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <div class="band-recommand-content">
+                        <h3><a href="#"></a></h3>
+                        <p></p>
+                        <p class="meta"></p>
+                        <a href="#"></a>
+                    </div> 
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="app-download">
+        <div class="section-container">
+            <figure>
+                <img src="" alt="">
+            </figure>
+            <div class="app-download-text">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div class="app-download-buttons">
+                <a href="#" class="google-play download-button"></a>
+                <a href="#" class="app-store download-button"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="section-container">
+            <nav class="footer-nav">
+                <ul class="footer-menu-list">
+                    <li></li>
+                </ul>
+            </nav>
+            <p class="footer-copy">
+                BAND &copy; 2024
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
